@@ -10,10 +10,8 @@ class C(A):
         super().__init__(a)
         self.c=c
 class D(B,C):
-    
     def __init__(self, b,a,c):
-        super().__init__(a, b)
-        C.__init__(a,c)
-
+        B.__init__(self, a, b)
+        C.__init__(self, a, c)
 
 d =D(1,2,3)
